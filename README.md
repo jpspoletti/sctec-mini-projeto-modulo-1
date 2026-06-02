@@ -1,1 +1,0 @@
-# sctec-mini-projeto-modulo-1
