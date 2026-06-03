@@ -40,10 +40,22 @@ with open(input_orders, "r", newline="") as csv_file:
         sumario[linhas_processadas] += 1
         writer.writerow(row)
 
-   
-print(f"Hipótese foi correta em: {hipoteses[correta]} e incorreta em: {hipoteses[incorreta]}")
-print(f"Portanto a hipótese é {correta if hipoteses[correta] > hipoteses[incorreta] else incorreta}.")
 
-print(f"Total de linhas processadas: {sumario[linhas_processadas]}")
-print(f"Total de nulos corrigidos: {sumario[nulos_corrigidos]}")
-print(f"Total de pedidos cancelados: {sumario[pedidos_cancelados]}")
+# Relatório de status
+print("\n" + "="*35)
+print("     RELATÓRIO DE STATUS")
+print("="*35)
+print(f"Linhas processadas:      {sumario[linhas_processadas]}")
+print(f"Nulos corrigidos:        {sumario[nulos_corrigidos]}")
+print(f"Pedidos cancelados:      {sumario[pedidos_cancelados]}")
+print("-" * 35)
+
+# Análise de hipóteses
+print("     HIPÓTESES TESTADAS")
+print(f"Hipótese foi correta em: {hipoteses[correta]}")
+print(f"Hipótese foi incorreta em: {hipoteses[incorreta]}")
+print(f"Portanto a hipótese é {correta if hipoteses[correta] > hipoteses[incorreta] else incorreta}.")
+print("-" * 35)
+
+print(f"Base Sanitizada")
+
